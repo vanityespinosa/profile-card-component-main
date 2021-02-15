@@ -14,7 +14,7 @@
     --dark-grayish-blue: hsl(227, 10%, 46%);
 
     /* Neutral */
-    --dary-gray: hsl(0, 0%, 59%);
+    --dark-gray: hsl(0, 0%, 59%);
 
     /******End Colors*****/
 }
@@ -49,18 +49,44 @@ body {
   top: 55%;
   z-index: -1;
 }
+
 /****************************************
-  Profile Container Styles
+  Utility Classes
 ****************************************/
-#profile-container {
-  height: 70%;
-  width: 80%;
-  background-color: grey;
-  border-radius: 15px;
+.bold-txt {
+  font-weight: 700;
+}
+.light-txt {
+  padding-top: 0.50rem;
+  font-size: 0.75rem;
+  color: var(--dark-gray);
+}
+.center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/****************************************
+  Profile Container Styles
+****************************************/
+#profile-container {
+  height: 60%;
+  width: 85%;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#card-bg {
+  border-radius: 15px 15px 0px 0px;
+  background-image: url("/images/bg-pattern-card.svg");
+  height: 40%;
+  width: 100%;
 }
 
 #img-container {
@@ -70,14 +96,40 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 33%;
+  z-index: 2;
 }
 
 #img-container img {
   border-radius: 50%;
 }
 
-#profile-name {
-  
+#profile {
+  width: 100%;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+#profile span {
+  font-weight: 400;
+  padding-left: 0.65rem;
+  color: var(--dark-gray);
+}
+#profile .location {
+  padding-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--dark-gray);
+}
+
+#profile-stats {
+  border-top: 1px solid var(--dark-gray);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.75rem 2.5rem;
 }
 
 /****************************************
