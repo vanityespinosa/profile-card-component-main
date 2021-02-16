@@ -6,48 +6,60 @@
   Overall Default Styles
 ****************************************/
 :root {
-    /******Start Colors*****/
+  /******Start Colors*****/
 
-    /* Primary */
-    --dark-cyan: hsl(185, 75%, 39%);
-    --very-dark-blue: hsl(229, 23%, 23%);
-    --dark-grayish-blue: hsl(227, 10%, 46%);
+  /* Primary */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
 
-    /* Neutral */
-    --dark-gray: hsl(0, 0%, 59%);
+  /* Neutral */
+  --dark-gray: hsl(0, 0%, 59%);
 
-    /******End Colors*****/
+  /******End Colors*****/
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
-    font-size: 18px;
-    font-family: 'Kumbh Sans', sans-serif;
-    background-color: var(--dark-cyan);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--dark-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-#top {
+.bg-pattern-top {
+  height: 100%;
+  width: 100%;
+  background-image: url("/images/bg-pattern-top.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
-  right: 20%;
-  bottom: 20%;
   z-index: -1;
+  left: -50%;
+  top: -25%;
 }
-#bottom {
+.bg-pattern-bottom {
+  height: 100%;
+  width: 100%;
+  background-image: url("/images/bg-pattern-bottom.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
-  top: 55%;
   z-index: -1;
+  right: -50%;
+  bottom: -65%;
 }
 
 /****************************************
@@ -57,7 +69,7 @@ body {
   font-weight: 700;
 }
 .light-txt {
-  padding-top: 0.50rem;
+  padding-top: 0.5rem;
   font-size: 0.75rem;
   color: var(--dark-gray);
 }
@@ -66,6 +78,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+/* Disable scroll for overflowing items */
+.disable {
+  overflow: hidden;
+  position: fixed;
 }
 
 /****************************************
@@ -80,6 +97,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
 }
 
 #card-bg {
@@ -106,7 +124,7 @@ body {
 }
 
 #profile {
-  width: 100%;  
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,10 +153,14 @@ body {
 /****************************************
   Footer Styles
 ****************************************/
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+footer {
+  position: absolute;
+  bottom: 5%;
 }
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
