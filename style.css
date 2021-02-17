@@ -164,3 +164,72 @@ footer {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/************************************************************
+  Tablet Design
+************************************************************/
+@media only screen and (min-width: 560px) {
+  /****************************************
+    Profile Container Styles
+  ****************************************/
+  #profile-container {
+    max-height: 1024px;
+    max-width: 560px;
+  }
+  #img-container {
+    top: 39%;
+  }
+}
+
+/************************************************************
+  Small Desktop Design
+************************************************************/
+@media only screen and (min-width: 1024px) {
+  .bg-pattern-top {
+    left: -50%;
+    top: -25%;
+  }
+  .bg-pattern-bottom {
+    right: -35%;
+    bottom: -65%;
+  }
+  /****************************************
+    Profile Container Styles
+  ****************************************/
+  #img-container {
+    height: 175px;
+    width: 175px;
+    top: 33%;
+  }
+  #img-container img {
+    height: 150px;
+    width: 150px;
+  }
+  #profile {
+    padding-top: 4rem;
+  }
+}
+
+/************************************************************
+  Desktop Design
+************************************************************/
+@media only screen and (min-width: 1200px) {
+  .bg-pattern-top {
+    left: -35%;
+    top: -55%;
+  }
+}
+
+/************************************************************
+  Large Desktop Design
+************************************************************/
+@media only screen and (min-width: 1440px) {
+  .bg-pattern-top {
+    left: -20%;
+    top: -50%;
+  }
+  .bg-pattern-bottom {
+    right: -46%;
+    bottom: -65%;
+  }
+}
